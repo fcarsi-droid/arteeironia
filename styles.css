@@ -137,55 +137,61 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* GRID DAS IMAGENS */
+/* GRID DE IMAGENS — VERSÃO GALERIA FASHION */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 22px;
   margin-top: 25px;
   justify-items: center;
 }
 
 .produto {
-  text-align: center;
   position: relative;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .grid img {
   width: 100%;
-  max-width: 140px;
+  max-width: 160px;
   height: auto;
   border-radius: 10px;
   border: 2px solid var(--amarelo);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.4s ease;
   box-shadow: 0 0 8px rgba(255, 214, 10, 0.2);
+  display: block;
   object-fit: cover;
 }
 
-/* BOTÃO “COMPRE AQUI” */
+/* BOTÃO SOBREPOSTO */
 .botao-comprar {
-  display: inline-block;
-  margin-top: 6px;
-  padding: 6px 14px;
-  background: var(--amarelo);
-  color: #1a1a1a;
-  font-weight: 700;
-  font-size: 12.5px;
-  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(61, 0, 117, 0.88);
+  color: var(--amarelo);
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px 0;
   text-decoration: none;
-  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.4s ease;
+  border-top: 1px solid var(--rosa);
 }
 
-.botao-comprar:hover {
-  background: var(--rosa);
-  color: #fff;
-  box-shadow: 0 0 12px rgba(255, 45, 146, 0.5);
+.produto:hover .botao-comprar {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 -3px 10px rgba(255, 45, 146, 0.5);
 }
 
-/* HOVER INTERATIVO */
 .produto:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
   border-color: var(--rosa);
   box-shadow: 0 0 16px rgba(255, 45, 146, 0.5);
 }
@@ -230,10 +236,16 @@ h2 {
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   }
 
   .grid img {
     max-width: 120px;
+  }
+
+  .botao-comprar {
+    opacity: 1;
+    transform: translateY(0);
+    font-size: 12px;
   }
 }
