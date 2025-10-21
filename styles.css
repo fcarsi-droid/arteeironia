@@ -135,6 +135,62 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
   .produto img {
-    height: 150px;
-  }
+    height: /* ===== COLEÇÕES — ESTILO UNIFICADO ===== */
+.container-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.produto-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.produto-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.produto-card img:hover {
+  transform: scale(1.05);
+}
+
+.produto-card h3 {
+  color: #5A189A;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.botao-comprar {
+  display: inline-block;
+  padding: 8px 18px;
+  background: linear-gradient(90deg, #FFD60A, #FF2D92);
+  color: #1a1a1a;
+  border-radius: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.botao-comprar:hover {
+  background: linear-gradient(90deg, #FF2D92, #FFD60A);
+  color: white;
 }
