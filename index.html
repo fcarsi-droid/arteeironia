@@ -6,27 +6,26 @@
   <title>Arte & Ironia — Pop Manifesto</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- BANNER PROMOCIONAL -->
+  <!-- Banner promocional -->
   <div class="banner">
-    Todas as camisetas por R$89,90 cada — frete grátis em compras acima de R$300,00 💥
+    💥 Todas as camisetas por <strong>R$89,90 cada</strong> | Frete grátis acima de R$300,00 | 6x sem juros 💳
   </div>
 
-  <!-- HEADER -->
+  <!-- Cabeçalho -->
   <header class="header">
     <nav class="nav">
-      <img src="img/logo.png" alt="Arte & Ironia" class="logo">
-      <div class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#colecoes">Coleções</a>
-        <a href="#manifesto">Manifesto</a>
-        <a href="#contato">Contato</a>
-      </div>
+      <img src="img/logo.png" alt="Logo Arte & Ironia" class="logo">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#colecoes">Coleções</a></li>
+        <li><a href="#manifesto">Manifesto</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- CARROSSEL DE DESTAQUES -->
+  <!-- Carrossel de destaques -->
   <section id="destaques" class="carrossel">
     <div class="slides">
       <div class="slide ativo">
@@ -46,81 +45,76 @@
         <div class="legenda">Pride 80’s</div>
       </div>
     </div>
+    <button class="nav-btn prev" onclick="mudarSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="mudarSlide(1)">&#10095;</button>
   </section>
 
-  <!-- MANIFESTO -->
-  <section id="manifesto" class="container manifesto">
+  <!-- Manifesto -->
+  <section id="manifesto" class="manifesto container">
     <h1>Pop Manifesto</h1>
-    <p>
-      Moda pop, crítica visual e ironia fina. Uma marca que mistura humor, diversidade e cultura — sem pedir permissão.
-      Arte & Ironia nasceu do desejo de unir o olhar criativo de um cinéfilo e ex-publicitário ao universo da cultura pop.
-      Cada coleção celebra a autenticidade, a pluralidade e o poder de rir de nós mesmos com estilo.
-    </p>
+    <p>Moda pop, crítica visual e ironia fina. Uma marca que mistura humor, diversidade e cultura — sem pedir permissão.</p>
   </section>
 
-  <!-- COLEÇÕES -->
+  <!-- Coleções -->
   <section id="colecoes" class="container">
     <h2>Coleções</h2>
-    <div class="grid">
-      <div class="produto">
-        <img src="img/Capivarinhas/vitrine19.png" alt="Capivarinhas">
-        <p class="titulo-colecao">Capivarinhas</p>
-        <a class="botao-comprar" href="colecao-capivarinhas.html">Ver coleção</a>
-      </div>
-
-      <div class="produto">
-        <img src="img/Divas/vitrine17.png" alt="Divas que eu amo">
-        <p class="titulo-colecao">Divas que eu amo</p>
-        <a class="botao-comprar" href="colecao-divas.html">Ver coleção</a>
-      </div>
-
-      <div class="produto">
-        <img src="img/Pet/vitrine9.png" alt="Coleção Pet">
-        <p class="titulo-colecao">Coleção Pet</p>
-        <a class="botao-comprar" href="colecao-pet.html">Ver coleção</a>
-      </div>
-
-      <div class="produto">
+    <div class="grid-colecoes">
+      <a href="colecao-capivarinhas.html" class="item">
+        <img src="img/Capivarinhas/vitrine24.png" alt="Capivarinhas">
+        <p>Capivarinhas</p>
+      </a>
+      <a href="colecao-divas.html" class="item">
+        <img src="img/Divas/vitrine17.png" alt="Divas">
+        <p>Divas que eu amo</p>
+      </a>
+      <a href="colecao-ofensiva-e-ironica.html" class="item">
         <img src="img/Ofensiva/vitrine36.png" alt="Ofensiva e Irônica">
-        <p class="titulo-colecao">Ofensiva & Irônica</p>
-        <a class="botao-comprar" href="colecao-ofensiva-e-ironica.html">Ver coleção</a>
-      </div>
-
-      <div class="produto">
+        <p>Ofensiva & Irônica</p>
+      </a>
+      <a href="colecao-pet.html" class="item">
+        <img src="img/Pet/vitrine9.png" alt="Pet">
+        <p>Pet</p>
+      </a>
+      <a href="colecao-pride.html" class="item">
         <img src="img/Pride/vitrine9.png" alt="Pride 80s">
-        <p class="titulo-colecao">Pride 80’s</p>
-        <a class="botao-comprar" href="colecao-pride.html">Ver coleção</a>
-      </div>
-
-      <div class="produto">
-        <img src="img/Representa/vitrine4.png" alt="Representa">
-        <p class="titulo-colecao">Representa</p>
-        <a class="botao-comprar" href="colecao-representa.html">Ver coleção</a>
-      </div>
-
-      <div class="produto">
-        <img src="img/Ursinhos/vitrine2.png" alt="Ursinhos Raivosos">
-        <p class="titulo-colecao">Ursinhos Raivosos</p>
-        <a class="botao-comprar" href="colecao-ursinhos-raivosos.html">Ver coleção</a>
-      </div>
-
-      <div class="produto">
-        <img src="img/Movie/vitrine2.png" alt="Movie Mania">
-        <p class="titulo-colecao">Movie Mania</p>
-        <a class="botao-comprar" href="colecao-movie-mania.html">Ver coleção</a>
-      </div>
+        <p>Pride 80’s</p>
+      </a>
+      <a href="colecao-ursinhos-raivosos.html" class="item">
+        <img src="img/Ursinhos/vitrine19.png" alt="Ursinhos Raivosos">
+        <p>Ursinhos Raivosos</p>
+      </a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+  <!-- Contato -->
+  <footer class="footer" id="contato">
+    <p><strong>Arte & Ironia</strong> — Moda com propósito e personalidade.</p>
     <p>
-      © 2025 <strong>Arte & Ironia</strong> — Todos os direitos reservados.  
-      | <a href="mailto:arteeironia@gmail.com">arteeironia@gmail.com</a> |
-      <a href="https://instagram.com/arteironia" target="_blank">Instagram</a> ·
-      <a href="https://tiktok.com/@arteironia" target="_blank">TikTok</a> ·
+      <a href="mailto:arteeironia@gmail.com">✉️ arteeironia@gmail.com</a> |
+      <a href="https://instagram.com/arteironia" target="_blank">Instagram</a> |
+      <a href="https://tiktok.com/@arteironia" target="_blank">TikTok</a> |
       <a href="https://facebook.com/arteironia" target="_blank">Facebook</a>
     </p>
   </footer>
+
+  <!-- Script do carrossel -->
+  <script>
+    let indice = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function mostrarSlide(n) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('ativo');
+        if (i === n) slide.classList.add('ativo');
+      });
+    }
+
+    function mudarSlide(direcao) {
+      indice = (indice + direcao + slides.length) % slides.length;
+      mostrarSlide(indice);
+    }
+
+    setInterval(() => mudarSlide(1), 4000);
+  </script>
 </body>
 </html>
