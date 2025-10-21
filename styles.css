@@ -1,12 +1,12 @@
 :root {
-  --roxo-escuro: #3D0075;
-  --roxo-card: #5A189A;
+  --roxo-escuro: #2B014F;
+  --roxo-card: #4B0082;
   --amarelo: #FFD60A;
   --rosa: #FF2D92;
   --texto: #F8F8FF;
 }
 
-/* RESET */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -21,76 +21,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* TITULOS */
-h1, h2, h3 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 800;
-}
-
-/* LINKS */
-a {
-  transition: 0.3s ease;
-}
-
-/* BOTÕES */
-.botao, .botao-comprar {
-  display: inline-block;
-  background: var(--amarelo);
-  color: #1a1a1a;
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  transition: 0.3s;
-}
-.botao:hover, .botao-comprar:hover {
-  background: var(--rosa);
-  color: #fff;
-  box-shadow: 0 0 14px rgba(255, 45, 146, 0.6);
-  transform: translateY(-2px);
-}
-
-/* GRID PRODUTOS (coleções individuais) */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-.produto {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 2px solid var(--amarelo);
-  background: var(--roxo-card);
-  box-shadow: 0 0 12px rgba(255, 214, 10, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.produto:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 18px rgba(255, 214, 10, 0.35);
-}
-.produto img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.botao-comprar {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.produto:hover .botao-comprar {
-  opacity: 1;
-}
-
-/* BANNER PROMOCIONAL */
+/* ===== BANNER PROMOCIONAL ===== */
 .banner {
   background: linear-gradient(90deg, var(--amarelo), var(--rosa));
   color: #1a1a1a;
@@ -99,71 +30,91 @@ a {
   padding: 12px 8px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
-/* CONTAINER PADRÃO */
+/* ===== HEADER ===== */
+.header {
+  border-bottom: 2px solid var(--amarelo);
+  background: rgba(75, 0, 130, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-weight: 900;
+  color: var(--amarelo);
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.brand img {
+  height: 42px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ===== CONTAINERS ===== */
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-/* FOOTER */
-.footer {
-  background: #1f003f;
-  color: #ccc;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 14px;
-  border-top: 2px solid var(--rosa);
-}
-.footer strong {
-  color: var(--amarelo);
-}
-.footer a {
-  color: var(--amarelo);
-  text-decoration: none;
-  margin: 0 5px;
-}
-.footer a:hover {
-  color: var(--rosa);
+/* ===== TÍTULOS ===== */
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  }
-  .produto img {
-    height: /* ===== COLEÇÕES — ESTILO UNIFICADO ===== */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--amarelo);
+  border-bottom: 2px solid var(--rosa);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+/* ===== GRADE DE PRODUTOS ===== */
 .container-produtos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
   justify-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .produto-card {
   background: #fff;
-  border-radius: 12px;
-  padding: 15px;
+  border-radius: 14px;
+  padding: 16px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 3px solid var(--amarelo);
 }
 
 .produto-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(255, 45, 146, 0.4);
 }
 
 .produto-card img {
   width: 100%;
-  max-width: 220px;
-  height: auto;
+  aspect-ratio: 1 / 1; /* 👈 mantém as miniaturas proporcionais */
+  object-fit: cover; /* evita distorção */
   border-radius: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -172,16 +123,17 @@ a {
 }
 
 .produto-card h3 {
-  color: #5A189A;
+  color: var(--roxo-card);
   font-size: 16px;
-  margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
+/* ===== BOTÃO COMPRAR ===== */
 .botao-comprar {
   display: inline-block;
-  padding: 8px 18px;
-  background: linear-gradient(90deg, #FFD60A, #FF2D92);
+  padding: 8px 20px;
+  background: linear-gradient(90deg, var(--amarelo), var(--rosa));
   color: #1a1a1a;
   border-radius: 25px;
   font-weight: 700;
@@ -191,6 +143,57 @@ a {
 }
 
 .botao-comprar:hover {
-  background: linear-gradient(90deg, #FF2D92, #FFD60A);
-  color: white;
+  background: linear-gradient(90deg, var(--rosa), var(--amarelo));
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 214, 10, 0.5);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #1f003f;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  border-top: 2px solid var(--rosa);
+}
+
+.footer strong {
+  color: var(--amarelo);
+}
+
+.footer a {
+  color: var(--amarelo);
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: var(--rosa);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .container-produtos {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .produto-card img {
+    max-width: 160px;
+  }
+
+  .banner {
+    font-size: 12px;
+    padding: 10px 6px;
+  }
+
+  .nav {
+    font-size: 18px;
+  }
+
+  .botao-comprar {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
 }
