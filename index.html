@@ -1,125 +1,191 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arte & Ironia — Pop Manifesto</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Arte & Ironia — Pop Manifesto. Moda pop, colorida, irônica e editorial. Todas as camisetas por R$ 89,90. Frete grátis acima de R$ 300. Parcelamos em até 6x." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="img/Divas%20que%20eu%20amo/vitrine1.png">
+  <link rel="preload" as="image" href="img/Ofensiva%20%26%20Irônica/vitrine1.png">
+  <link rel="preload" as="image" href="img/Pet/vitrine1.png">
+  <link rel="preload" as="image" href="img/Ofensiva%20%26%20Irônica/vitrine2.png">
 </head>
 <body>
-
-  <!-- Banner -->
-  <div class="banner">
-    💥 Todas as camisetas por R$ 89,90 cada • Frete grátis acima de R$ 300,00 • Parcelamos em até 6x 💳
+  <!-- 1) Banner Promocional -->
+  <div class="promo-banner" role="region" aria-label="Promoções ativas">
+    <p>💥 Todas as camisetas por R$ 89,90 cada • Frete grátis acima de R$ 300 • Parcelamos em até 6x 💳</p>
   </div>
 
-  <!-- Header -->
-  <header class="header">
-    <nav class="nav">
-      <img src="img/logo.png" alt="Arte & Ironia" class="logo">
-      <ul>
-        <li><a href="#colecoes">Coleções</a></li>
-        <li><a href="#manifesto">Manifesto</a></li>
-        <li><a href="mailto:arteeironia@gmail.com">Contato</a></li>
-      </ul>
-    </nav>
+  <!-- 2) Header fixo -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Início — Arte & Ironia">Arte &amp; Ironia — <span>Pop Manifesto</span></a>
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#colecoes">Coleções</a></li>
+          <li><a href="#manifesto">Manifesto</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Carrossel de Destaques -->
-  <section class="carrossel">
-    <div class="carrossel-container">
-      <div class="slide"><img src="img/Pet/amy.png" alt="Amy"></div>
-      <div class="slide"><img src="img/Ofensiva/pqp.png" alt="PQP"></div>
-      <div class="slide"><img src="img/Pet/rainha.png" alt="Rainha de Copas"></div>
-      <div class="slide"><img src="img/Ofensiva/hemona.png" alt="Hemona"></div>
+  <main id="inicio">
+    <!-- 3) Carrossel de Destaques -->
+    <section class="hero" aria-label="Destaques">
+      <div class="carousel" data-autoplay="true" data-interval="5000" data-effect="fade">
+        <button class="ctrl prev" aria-label="Slide anterior" data-dir="-1">&#10094;</button>
+        <div class="slides">
+          <!-- Amy (Divas) -->
+          <figure class="slide is-active">
+            <img src="img/Divas%20que%20eu%20amo/vitrine1.png" alt="Destaque: Amy — coleção Divas que eu amo" />
+            <figcaption>
+              <h2>DIVAS QUE EU AMO</h2>
+              <p>Amy — pop &amp; editorial</p>
+            </figcaption>
+          </figure>
+          <!-- PQP (Ofensiva & Irônica) -->
+          <figure class="slide">
+            <img src="img/Ofensiva%20%26%20Irônica/vitrine1.png" alt="Destaque: PQP — coleção Ofensiva &amp; Irônica" />
+            <figcaption>
+              <h2>OFENSIVA &amp; IRÔNICA</h2>
+              <p>PQP — humor ácido</p>
+            </figcaption>
+          </figure>
+          <!-- Rainha de Copas (Pet) -->
+          <figure class="slide">
+            <img src="img/Pet/vitrine1.png" alt="Destaque: Rainha de Copas — coleção Pet" />
+            <figcaption>
+              <h2>PET</h2>
+              <p>Rainha de Copas — pets com personalidade</p>
+            </figcaption>
+          </figure>
+          <!-- Hemona (Ofensiva & Irônica) -->
+          <figure class="slide">
+            <img src="img/Ofensiva%20%26%20Irônica/vitrine2.png" alt="Destaque: Hemona — coleção Ofensiva &amp; Irônica" />
+            <figcaption>
+              <h2>OFENSIVA &amp; IRÔNICA</h2>
+              <p>Hemona — debochado e editorial</p>
+            </figcaption>
+          </figure>
+        </div>
+        <button class="ctrl next" aria-label="Próximo slide" data-dir="1">&#10095;</button>
+        <div class="dots" role="tablist" aria-label="Indicadores do carrossel">
+          <button class="dot is-active" role="tab" aria-selected="true" aria-controls="slide-1"><span class="sr-only">Slide 1</span></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide-2"><span class="sr-only">Slide 2</span></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide-3"><span class="sr-only">Slide 3</span></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide-4"><span class="sr-only">Slide 4</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) Seção Coleções -->
+    <section id="colecoes" class="collections" aria-labelledby="titulo-colecoes">
+      <div class="container">
+        <h3 id="titulo-colecoes" class="section-title">COLEÇÕES</h3>
+        <div class="grid">
+          <!-- Capivarinhas -->
+          <article class="card">
+            <img src="img/Capivarinhas/vitrine1.png" alt="Coleção Capivarinhas — vitrine" loading="lazy" />
+            <div class="card-body">
+              <h4>Capivarinhas</h4>
+              <button class="btn see-collection" data-collection="Capivarinhas">Ver Coleção</button>
+            </div>
+          </article>
+          <!-- Divas que eu amo -->
+          <article class="card">
+            <img src="img/Divas%20que%20eu%20amo/vitrine1.png" alt="Coleção Divas que eu amo — vitrine" loading="lazy" />
+            <div class="card-body">
+              <h4>Divas que eu amo</h4>
+              <button class="btn see-collection" data-collection="Divas que eu amo">Ver Coleção</button>
+            </div>
+          </article>
+          <!-- Ofensiva & Irônica -->
+          <article class="card">
+            <img src="img/Ofensiva%20%26%20Irônica/vitrine1.png" alt="Coleção Ofensiva e Irônica — vitrine" loading="lazy" />
+            <div class="card-body">
+              <h4>Ofensiva &amp; Irônica</h4>
+              <button class="btn see-collection" data-collection="Ofensiva & Irônica">Ver Coleção</button>
+            </div>
+          </article>
+          <!-- Pet -->
+          <article class="card">
+            <img src="img/Pet/vitrine1.png" alt="Coleção Pet — vitrine" loading="lazy" />
+            <div class="card-body">
+              <h4>Pet</h4>
+              <button class="btn see-collection" data-collection="Pet">Ver Coleção</button>
+            </div>
+          </article>
+          <!-- Representa -->
+          <article class="card">
+            <img src="img/Representa/vitrine1.png" alt="Coleção Representa — vitrine" loading="lazy" />
+            <div class="card-body">
+              <h4>Representa</h4>
+              <button class="btn see-collection" data-collection="Representa">Ver Coleção</button>
+            </div>
+          </article>
+          <!-- Pride 80's -->
+          <article class="card">
+            <img src="img/Pride%2080%E2%80%99s/vitrine1.png" alt="Coleção Pride 80’s — vitrine" loading="lazy" />
+            <div class="card-body">
+              <h4>Pride 80’s</h4>
+              <button class="btn see-collection" data-collection="Pride 80’s">Ver Coleção</button>
+            </div>
+          </article>
+          <!-- Movie Mania -->
+          <article class="card">
+            <img src="img/Movie%20Mania/vitrine1.png" alt="Coleção Movie Mania — vitrine" loading="lazy" />
+            <div class="card-body">
+              <h4>Movie Mania</h4>
+              <button class="btn see-collection" data-collection="Movie Mania">Ver Coleção</button>
+            </div>
+          </article>
+          <!-- Ursinhos Raivosos -->
+          <article class="card">
+            <img src="img/Ursinhos%20Raivosos/vitrine1.png" alt="Coleção Ursinhos Raivosos — vitrine" loading="lazy" />
+            <div class="card-body">
+              <h4>Ursinhos Raivosos</h4>
+              <button class="btn see-collection" data-collection="Ursinhos Raivosos">Ver Coleção</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) Manifesto (final da página) -->
+    <section id="manifesto" class="manifesto" aria-labelledby="titulo-manifesto">
+      <div class="container manifesto-inner">
+        <h3 id="titulo-manifesto" class="section-title">MANIFESTO</h3>
+        <article class="manifesto-content">
+          <p>🎬 <strong>Manifesto — Arte &amp; Ironia: Pop com propósito</strong></p>
+          <p>Cinéfilo desde sempre e ex-dono de uma locadora no começo dos anos 2000, eu cresci entre fitas VHS, posters e histórias que moldaram a cultura pop.</p>
+          <p>A vida me levou por outros caminhos — inclusive longe da arte —, mas a criatividade nunca deixou de me cutucar.</p>
+          <p><strong>Arte &amp; Ironia</strong> nasceu dessa mistura de saudade, rebeldia e vontade de criar algo que tivesse a minha cara — e a de muita gente que não se vê representada nos clichês da moda.</p>
+          <p>Aqui, diversidade não é discurso: é base, é bandeira, é estética.</p>
+          <p>Cada coleção é um espelho do que somos — múltiplos, coloridos, intensos, livres e (por que não?) um pouco debochados.</p>
+          <p>Mais do que camisetas, o que eu vendo é identidade.<br>Mais do que estilo, o que eu quero é expressão.</p>
+          <p>💖 <strong>Arte &amp; Ironia:</strong> vista sua ironia. Use sua arte.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6) Rodapé -->
+  <footer id="contato" class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="brandline">© <span id="year"></span> Arte &amp; Ironia — Pop Manifesto</p>
+      <ul class="social">
+        <li><a href="https://www.instagram.com/arteironia" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@arteironia" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.facebook.com/share/19vFYUkjhG/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="mailto:arteeironia@gmail.com">arteeironia@gmail.com</a></li>
+      </ul>
     </div>
-  </section>
-
-  <!-- Coleções -->
-  <section id="colecoes" class="colecoes">
-    <h2>Coleções</h2>
-    <div class="grid-colecoes">
-      <div class="colecao">
-        <img src="img/Capivarinhas/vitrine1.png" alt="Capivarinhas">
-        <h3>Capivarinhas</h3>
-        <a href="colecao-capivarinhas.html" class="botao">Ver Coleção</a>
-      </div>
-
-      <div class="colecao">
-        <img src="img/Divas/vitrine1.png" alt="Divas que eu amo">
-        <h3>Divas que eu amo</h3>
-        <a href="colecao-divas.html" class="botao">Ver Coleção</a>
-      </div>
-
-      <div class="colecao">
-        <img src="img/Ofensiva/vitrine1.png" alt="Ofensiva e Irônica">
-        <h3>Ofensiva & Irônica</h3>
-        <a href="colecao-ofensiva-e-ironica.html" class="botao">Ver Coleção</a>
-      </div>
-
-      <div class="colecao">
-        <img src="img/Pet/vitrine1.png" alt="Coleção Pet">
-        <h3>Pet</h3>
-        <a href="colecao-pet.html" class="botao">Ver Coleção</a>
-      </div>
-
-      <div class="colecao">
-        <img src="img/Representa/vitrine1.png" alt="Representa">
-        <h3>Representa</h3>
-        <a href="colecao-representa.html" class="botao">Ver Coleção</a>
-      </div>
-
-      <div class="colecao">
-        <img src="img/Pride/vitrine1.png" alt="Pride 80s">
-        <h3>Pride 80’s</h3>
-        <a href="colecao-pride.html" class="botao">Ver Coleção</a>
-      </div>
-
-      <div class="colecao">
-        <img src="img/Movie/vitrine1.png" alt="Movie Mania">
-        <h3>Movie Mania</h3>
-        <a href="colecao-movie-mania.html" class="botao">Ver Coleção</a>
-      </div>
-
-      <div class="colecao">
-        <img src="img/Ursinhos/vitrine1.png" alt="Ursinhos Raivosos">
-        <h3>Ursinhos Raivosos</h3>
-        <a href="colecao-ursinhos-raivosos.html" class="botao">Ver Coleção</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Manifesto -->
-  <section id="manifesto" class="manifesto">
-    <h2>Manifesto — Arte & Ironia: Pop com propósito</h2>
-    <p>Cinéfilo desde sempre e ex-dono de uma locadora no começo dos anos 2000, eu cresci entre fitas VHS, posters e histórias que moldaram a cultura pop.</p>
-    <p>A vida me levou por outros caminhos — inclusive longe da arte —, mas a criatividade nunca deixou de me cutucar.</p>
-    <p><strong>Arte & Ironia</strong> nasceu dessa mistura de saudade, rebeldia e vontade de criar algo que tivesse a minha cara — e a de muita gente que não se vê representada nos clichês da moda.</p>
-    <p>Aqui, diversidade não é discurso: é base, é bandeira, é estética.</p>
-    <p>Cada coleção é um espelho do que somos — múltiplos, coloridos, intensos, livres e (por que não?) um pouco debochados.</p>
-    <p>Mais do que camisetas, o que eu vendo é identidade.<br>Mais do que estilo, o que eu quero é expressão.</p>
-    <p>💖 <strong>Arte & Ironia:</strong> vista sua ironia. Use sua arte.</p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p><strong>Arte & Ironia</strong> — Pop, diversidade e expressão.</p>
-    <p>
-      <a href="https://www.instagram.com/arteironia" target="_blank">Instagram</a> |
-      <a href="mailto:arteeironia@gmail.com">E-mail</a> |
-      <a href="#topo">Voltar ao topo</a>
-    </p>
   </footer>
 
-  <!-- Carrossel Script -->
-  <script>
-    const container = document.querySelector('.carrossel-container');
-    let index = 0;
-    setInterval(() => {
-      index = (index + 1) % 4;
-      container.style.transform = `translateX(-${index * 100}%)`;
-    }, 4000);
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
