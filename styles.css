@@ -1,11 +1,9 @@
 :root {
-  --fundo: #1E1E2F;
-  --roxo-escuro: #1E1E2F;
-  --roxo-card: #6C63FF;
-  --amarelo: #FFD54F;
-  --rosa: #FF6EC7;
-  --texto: #F9F9F9;
-  --transparente: rgba(255, 255, 255, 0.1);
+  --roxo-escuro: #1a102b;
+  --roxo-card: #2c1654;
+  --amarelo: #FFD60A;
+  --rosa: #FF2D92;
+  --texto: #F8F8FF;
 }
 
 /* RESET */
@@ -16,68 +14,129 @@
 }
 
 html, body {
-  background: var(--fundo);
+  background: var(--roxo-escuro);
   color: var(--texto);
-  font-family: "Poppins", "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* NAV */
-nav {
-  background: rgba(30, 30, 47, 0.9);
-  color: var(--amarelo);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 40px;
+/* BANNER */
+.banner {
+  background: linear-gradient(90deg, var(--amarelo), var(--rosa));
+  color: #1a1a1a;
+  font-weight: 900;
+  text-align: center;
+  padding: 12px 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* HEADER */
+.header {
+  border-bottom: 2px solid var(--amarelo);
+  background: rgba(26, 16, 43, 0.95);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 2px solid var(--amarelo);
 }
 
-nav a {
-  color: var(--texto);
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.menu a {
+  color: var(--amarelo);
+  margin: 0 12px;
   text-decoration: none;
-  margin-left: 18px;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-nav a:hover {
+.menu a:hover {
   color: var(--rosa);
 }
 
-/* BANNER POP */
-.banner {
-  background: linear-gradient(135deg, var(--roxo-card), var(--rosa), var(--amarelo));
-  background-size: 300% 300%;
-  animation: move 6s ease infinite;
-  text-align: center;
-  padding: 14px 10px;
-  font-weight: 900;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #111;
-  text-shadow: 0 0 8px rgba(255,255,255,0.3);
-  box-shadow: 0 0 20px rgba(255, 110, 199, 0.4);
-}
-
-@keyframes move {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* CONTAINER */
+/* CONTAINERS */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
-/* TÍTULOS */
+/* MANIFESTO */
+.manifesto h1 {
+  color: var(--amarelo);
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.manifesto p {
+  text-align: center;
+  margin-bottom: 14px;
+  font-size: 17px;
+  color: #eee;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* CARROSSEL */
+.carrossel {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+  margin-bottom: 40px;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  animation: slideShow 18s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.legenda {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 0;
+}
+
+@keyframes slideShow {
+  0%, 20% { transform: translateX(0%); }
+  25%, 45% { transform: translateX(-100%); }
+  50%, 70% { transform: translateX(-200%); }
+  75%, 95% { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
+}
+
+/* COLEÇÕES */
 h2 {
   font-size: 28px;
   border-bottom: 2px solid var(--rosa);
@@ -87,126 +146,82 @@ h2 {
   text-align: center;
 }
 
-/* DESCRIÇÃO DAS COLEÇÕES */
-.container p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  color: #ccc;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-/* GRADE DE PRODUTOS — estilo galeria */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 40px;
-  justify-items: center;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 22px;
 }
 
-/* PRODUTO — minimalista */
 .produto {
-  position: relative;
   text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .produto img {
   width: 100%;
   max-width: 180px;
-  height: auto;
-  object-fit: contain;
   border-radius: 8px;
-  transition: transform 0.4s ease;
-  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  margin: 0 auto 10px;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.produto:hover img {
+.produto img:hover {
   transform: scale(1.05);
-  opacity: 0.9;
 }
 
-/* BOTÃO "COMPRE AQUI" — aparece só no hover */
-.botao-comprar {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%) translateY(30px);
-  opacity: 0;
-  background: var(--amarelo);
-  color: #1a1a1a;
+.titulo-colecao {
+  color: var(--amarelo);
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-size: 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 213, 79, 0.3);
+  font-size: 14px;
 }
 
-.produto:hover .botao-comprar {
-  transform: translateX(-50%) translateY(0);
-  opacity: 1;
+.botao-comprar {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 16px;
+  background: var(--rosa);
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .botao-comprar:hover {
-  background: var(--rosa);
-  color: #fff;
-  box-shadow: 0 0 12px rgba(255, 110, 199, 0.5);
+  background: var(--amarelo);
+  color: #1a1a1a;
 }
 
 /* FOOTER */
 .footer {
-  background: #141422;
+  background: #0e071d;
   color: #ccc;
   text-align: center;
-  padding: 40px 20px;
+  padding: 25px 20px;
   font-size: 14px;
   border-top: 2px solid var(--rosa);
-  margin-top: 60px;
-}
-
-.footer strong {
-  color: var(--amarelo);
 }
 
 .footer a {
   color: var(--amarelo);
   text-decoration: none;
-  margin: 0 6px;
-  transition: color 0.3s ease;
 }
 
 .footer a:hover {
   color: var(--rosa);
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    text-align: center;
+  .slides {
+    animation: none;
   }
-
-  .banner {
-    font-size: 13px;
-    padding: 10px;
+  .slide img {
+    height: 200px;
   }
-
-  .grid {
-    gap: 28px;
-  }
-
-  .produto img {
-    max-width: 140px;
-  }
-
-  .botao-comprar {
-    font-size: 11px;
-    padding: 5px 10px;
+  .menu a {
+    display: block;
+    margin: 8px 0;
   }
 }
