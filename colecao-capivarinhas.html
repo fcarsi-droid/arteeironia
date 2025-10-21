@@ -8,15 +8,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="header"></div>
-<script>
-fetch("header.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("header").innerHTML = data;
-  })
-  .catch(err => console.error("Erro ao carregar o cabeçalho:", err));
-</script>
+  <header class="header">
+    <div class="banner">
+      💥 Todas as camisetas por R$ 89,90 - Cada. 
+      🚚 Frete grátis acima de R$ 300,00
+      💳 Parcelamento em até 6x sem juros
+    </div>
     <div class="nav">
       <div class="brand">
         <img src="img/logo.png" alt="Logo">

@@ -1,9 +1,9 @@
 :root {
-  --roxo-escuro: #3D0075;
-  --roxo-card: #5A189A;
+  --roxo-escuro: #2B014F;
+  --roxo-card: #4B0082;
   --amarelo: #FFD60A;
   --rosa: #FF2D92;
-  --texto: #2C2C2C;
+  --texto: #F8F8FF;
 }
 
 /* ===== RESET ===== */
@@ -14,7 +14,7 @@
 }
 
 html, body {
-  background: #FAF8FF;
+  background: var(--roxo-escuro);
   color: var(--texto);
   font-family: "Poppins", "Inter", sans-serif;
   line-height: 1.6;
@@ -23,38 +23,48 @@ html, body {
 
 /* ===== BANNER PROMOCIONAL ===== */
 .banner {
-  background: linear-gradient(90deg, var(--rosa), var(--amarelo));
-  color: #fff;
+  background: linear-gradient(90deg, var(--amarelo), var(--rosa));
+  color: #1a1a1a;
   font-weight: 800;
   text-align: center;
-  padding: 8px 0;
+  padding: 10px 6px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-size: 12px;
-  border-bottom: 2px solid var(--roxo-card);
 }
 
 /* ===== HEADER ===== */
 .header {
-  background: var(--roxo-escuro);
-  border-bottom: 3px solid var(--amarelo);
-  color: var(--amarelo);
-  text-align: center;
-  padding: 16px 0;
-  font-weight: 900;
-  font-size: 22px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  border-bottom: 2px solid var(--amarelo);
+  background: rgba(75, 0, 130, 0.9);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-/* ===== CONTAINER ===== */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-weight: 900;
+  color: var(--amarelo);
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.brand img {
+  height: 38px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ===== CONTAINERS ===== */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 /* ===== TÍTULOS ===== */
@@ -66,45 +76,47 @@ h1, h2, h3 {
 
 h2 {
   text-align: center;
-  font-size: 26px;
-  color: var(--roxo-card);
+  font-size: 24px;
+  color: var(--amarelo);
   border-bottom: 2px solid var(--rosa);
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+  padding-bottom: 6px;
+  margin-bottom: 24px;
 }
 
-/* ===== GRADE DE PRODUTOS ===== */
+/* ===== GRADE DE PRODUTOS (versão mini) ===== */
 .container-produtos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 25px;
   justify-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .produto-card {
   background: #fff;
-  border-radius: 14px;
+  border-radius: 12px;
+  padding: 10px;
   text-align: center;
   width: 100%;
-  max-width: 240px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  max-width: 170px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 1px solid #eee;
+  border: 2px solid var(--amarelo);
 }
 
 .produto-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(90, 24, 154, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 45, 146, 0.4);
 }
 
 .produto-card img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px;
+  margin-bottom: 6px;
   transition: transform 0.3s ease;
-  max-height: 220px;
+  max-height: 110px; /* 🔥 miniatura mais delicada */
 }
 
 .produto-card img:hover {
@@ -113,37 +125,36 @@ h2 {
 
 .produto-card h3 {
   color: var(--roxo-card);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  margin: 10px 0;
+  margin-bottom: 4px;
 }
 
 /* ===== BOTÃO COMPRAR ===== */
 .botao-comprar {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 5px 12px;
   background: linear-gradient(90deg, var(--amarelo), var(--rosa));
   color: #1a1a1a;
-  border-radius: 25px;
+  border-radius: 20px;
   font-weight: 700;
   text-decoration: none;
-  font-size: 12px;
-  margin-bottom: 14px;
+  font-size: 11px;
   transition: all 0.3s ease;
 }
 
 .botao-comprar:hover {
   background: linear-gradient(90deg, var(--rosa), var(--amarelo));
   color: #fff;
-  box-shadow: 0 0 10px rgba(255, 214, 10, 0.6);
+  box-shadow: 0 0 10px rgba(255, 214, 10, 0.5);
 }
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--roxo-escuro);
+  background: #1f003f;
   color: #ccc;
   text-align: center;
-  padding: 30px 20px;
+  padding: 25px 20px;
   font-size: 13px;
   border-top: 2px solid var(--rosa);
 }
@@ -155,7 +166,7 @@ h2 {
 .footer a {
   color: var(--amarelo);
   text-decoration: none;
-  margin: 0 6px;
+  margin: 0 5px;
   transition: color 0.3s;
 }
 
@@ -163,40 +174,33 @@ h2 {
   color: var(--rosa);
 }
 
-/* ===== LINKS GERAIS ===== */
-a.link-voltar {
-  display: inline-block;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: var(--rosa);
-  font-weight: 600;
-  transition: 0.3s;
-}
-a.link-voltar:hover {
-  color: var(--amarelo);
-}
-
-/* ===== RESPONSIVO ===== */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
   .container-produtos {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 18px;
   }
 
   .produto-card {
-    max-width: 180px;
+    max-width: 150px;
+    padding: 8px;
   }
 
   .produto-card img {
-    max-height: 160px;
+    max-height: 95px;
   }
 
   .botao-comprar {
     font-size: 10px;
-    padding: 5px 10px;
+    padding: 4px 10px;
   }
 
   .banner {
     font-size: 11px;
-    padding: 6px;
+    padding: 8px 5px;
+  }
+
+  .nav {
+    font-size: 16px;
   }
 }
