@@ -4,34 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arte & Ironia — Pop Manifesto</title>
-  <link rel="icon" href="img/logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- MENU -->
-  <nav>
-    <div style="font-weight:900;color:var(--amarelo);text-transform:uppercase;letter-spacing:1px;">Arte & Ironia</div>
-    <div>
-      <a href="#inicio">Início</a>
-      <a href="#colecoes">Coleções</a>
-      <a href="#manifesto">Manifesto</a>
-      <a href="#contato">Contato</a>
-    </div>
-  </nav>
-
-  <!-- BANNER -->
+  <!-- BANNER PROMOCIONAL -->
   <div class="banner">
-    💥 Todas as camisetas por R$ 89,90 cada · 🚚 Frete grátis acima de R$ 300,00 · 💳 Parcelamento em até 6x sem juros
+    Todas as camisetas por R$89,90 cada — frete grátis em compras acima de R$300,00 💥
   </div>
 
-  <!-- SEÇÃO HERO / CARROSSEL SIMPLES -->
-  <section id="inicio" class="container" style="text-align:center;">
-    <img src="img/logo.png" alt="Arte & Ironia Logo" style="max-width:180px;margin:40px auto 10px;">
-    <h1 style="color:var(--amarelo);font-size:28px;margin-bottom:10px;">Pop Manifesto</h1>
-    <p style="color:#ccc;max-width:700px;margin:0 auto 40px;">
-      Moda pop, crítica visual e ironia fina.  
-      Uma marca que mistura humor, diversidade e cultura — sem pedir permissão.
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav">
+      <img src="img/logo.png" alt="Arte & Ironia" class="logo">
+      <div class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#colecoes">Coleções</a>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CARROSSEL DE DESTAQUES -->
+  <section id="destaques" class="carrossel">
+    <div class="slides">
+      <div class="slide ativo">
+        <img src="img/Divas/vitrine17.png" alt="Amy Winehouse">
+        <div class="legenda">Divas que eu amo</div>
+      </div>
+      <div class="slide">
+        <img src="img/Ofensiva/vitrine36.png" alt="Ofensiva e Irônica">
+        <div class="legenda">Ofensiva & Irônica</div>
+      </div>
+      <div class="slide">
+        <img src="img/Pet/vitrine9.png" alt="Coleção Pet">
+        <div class="legenda">Coleção Pet</div>
+      </div>
+      <div class="slide">
+        <img src="img/Pride/vitrine9.png" alt="Pride 80s">
+        <div class="legenda">Pride 80’s</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section id="manifesto" class="container manifesto">
+    <h1>Pop Manifesto</h1>
+    <p>
+      Moda pop, crítica visual e ironia fina. Uma marca que mistura humor, diversidade e cultura — sem pedir permissão.
+      Arte & Ironia nasceu do desejo de unir o olhar criativo de um cinéfilo e ex-publicitário ao universo da cultura pop.
+      Cada coleção celebra a autenticidade, a pluralidade e o poder de rir de nós mesmos com estilo.
     </p>
   </section>
 
@@ -41,82 +64,63 @@
     <div class="grid">
       <div class="produto">
         <img src="img/Capivarinhas/vitrine19.png" alt="Capivarinhas">
+        <p class="titulo-colecao">Capivarinhas</p>
         <a class="botao-comprar" href="colecao-capivarinhas.html">Ver coleção</a>
       </div>
 
       <div class="produto">
         <img src="img/Divas/vitrine17.png" alt="Divas que eu amo">
+        <p class="titulo-colecao">Divas que eu amo</p>
         <a class="botao-comprar" href="colecao-divas.html">Ver coleção</a>
       </div>
 
       <div class="produto">
         <img src="img/Pet/vitrine9.png" alt="Coleção Pet">
+        <p class="titulo-colecao">Coleção Pet</p>
         <a class="botao-comprar" href="colecao-pet.html">Ver coleção</a>
       </div>
 
       <div class="produto">
-        <img src="img/Ofensiva/vitrine36.png" alt="Ofensiva & Irônica">
+        <img src="img/Ofensiva/vitrine36.png" alt="Ofensiva e Irônica">
+        <p class="titulo-colecao">Ofensiva & Irônica</p>
         <a class="botao-comprar" href="colecao-ofensiva-e-ironica.html">Ver coleção</a>
       </div>
 
       <div class="produto">
-        <img src="img/Pride/vitrine9.png" alt="Pride 80’s">
+        <img src="img/Pride/vitrine9.png" alt="Pride 80s">
+        <p class="titulo-colecao">Pride 80’s</p>
         <a class="botao-comprar" href="colecao-pride.html">Ver coleção</a>
       </div>
 
       <div class="produto">
         <img src="img/Representa/vitrine4.png" alt="Representa">
+        <p class="titulo-colecao">Representa</p>
         <a class="botao-comprar" href="colecao-representa.html">Ver coleção</a>
       </div>
 
       <div class="produto">
         <img src="img/Ursinhos/vitrine2.png" alt="Ursinhos Raivosos">
+        <p class="titulo-colecao">Ursinhos Raivosos</p>
         <a class="botao-comprar" href="colecao-ursinhos-raivosos.html">Ver coleção</a>
       </div>
 
       <div class="produto">
         <img src="img/Movie/vitrine2.png" alt="Movie Mania">
+        <p class="titulo-colecao">Movie Mania</p>
         <a class="botao-comprar" href="colecao-movie-mania.html">Ver coleção</a>
       </div>
     </div>
   </section>
 
-  <!-- MANIFESTO -->
-  <section id="manifesto" class="container">
-    <h2>Manifesto — Arte & Ironia</h2>
-    <p>
-      Cinéfilo desde sempre e ex-dono de uma locadora no começo dos anos 2000, cresci entre fitas VHS, posters e histórias que moldaram a cultura pop.  
-      A vida me levou por outros caminhos — inclusive longe da arte —, mas a criatividade nunca deixou de me cutucar.
-    </p>
-    <p>
-      <strong>Arte & Ironia</strong> nasceu dessa mistura de saudade, rebeldia e vontade de criar algo que tivesse a minha cara — e a de muita gente que não se vê representada nos clichês da moda.  
-      Aqui, diversidade não é discurso: é base, é bandeira, é estética.  
-      Cada coleção é um espelho do que somos — múltiplos, coloridos, intensos, livres e, claro, um pouco debochados.
-    </p>
-    <p>
-      Mais do que camisetas, o que eu vendo é identidade.  
-      Mais do que estilo, o que eu quero é expressão.
-    </p>
-    <p style="text-align:center;color:var(--rosa);font-weight:700;margin-top:20px;">
-      🩷 Arte & Ironia: vista sua ironia. Use sua arte.
-    </p>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="container" style="text-align:center;">
-    <h2>Fale Conosco</h2>
-    <p>📧 <a href="mailto:arteeironia@gmail.com">arteeironia@gmail.com</a></p>
-    <p>💜 Siga e compartilhe:</p>
-    <p>
-      <a href="https://www.instagram.com/arteironia" target="_blank">Instagram</a> · 
-      <a href="https://www.tiktok.com/@arteironia" target="_blank">TikTok</a> · 
-      <a href="https://www.facebook.com/share/19vFYUkjhG/" target="_blank">Facebook</a>
-    </p>
-  </section>
-
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© Arte & Ironia — <strong>Vista sua ironia. Use sua arte.</strong></p>
+    <p>
+      © 2025 <strong>Arte & Ironia</strong> — Todos os direitos reservados.  
+      | <a href="mailto:arteeironia@gmail.com">arteeironia@gmail.com</a> |
+      <a href="https://instagram.com/arteironia" target="_blank">Instagram</a> ·
+      <a href="https://tiktok.com/@arteironia" target="_blank">TikTok</a> ·
+      <a href="https://facebook.com/arteironia" target="_blank">Facebook</a>
+    </p>
   </footer>
 </body>
 </html>
